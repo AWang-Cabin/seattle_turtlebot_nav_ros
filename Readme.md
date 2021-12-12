@@ -6,7 +6,7 @@
 **Email:** ywang3781@gatech.edu
 ## Introduction
 
-This repository is a ROS package to connect the [Seattle library management application]() with Turtlebot3 with LCM.
+This repository is a ROS package to connect the [Seattle library management application](https://github.com/AWang-Cabin/Seattle-LibMS) with Turtlebot3 with LCM.
 
 The node **goalPublisher** will receive the "*Destination*" channel in LCM and publish */move_base_simple/goal* topic in ROS,
 
