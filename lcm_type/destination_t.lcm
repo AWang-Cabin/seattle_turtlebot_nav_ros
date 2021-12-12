@@ -1,0 +1,5 @@
+ struct destination_t
+ {
+    float  des_x;
+    float  des_y;
+ }

@@ -1,0 +1,8 @@
+struct robot_state_t
+{
+	float robo_x;
+	float robo_y;
+
+	float robo_vx;
+	float robo_vy;
+}
