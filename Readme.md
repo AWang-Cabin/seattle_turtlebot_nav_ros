@@ -12,6 +12,8 @@ The node **goalPublisher** will receive the "*Destination*" channel in LCM and p
 
 and the node **roboStatePublisher** will receive the "*/move_base/global_costmap/footprint*" and "*/odom*" topic from Turtlebot and publish *RobotState* topic for ROS.
 
+![Screenshot from 2021-12-12 13-49-04](https://user-images.githubusercontent.com/69251304/145725498-7bc5d18a-ad23-4be7-b1b1-27533a07b6d5.png)
+
 ## Build
   * To build this package, all [dependencies](#Dependency) must be installed at first.
   * Create the workspace
