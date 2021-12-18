@@ -2,7 +2,7 @@
 
 ----
 **Date:** 12/2021\
-**Author:** Yinuo Wang\
+**Author:** Wang, Yinuo\
 **Email:** ywang3781@gatech.edu
 ## Introduction
 
@@ -15,8 +15,8 @@ and the node **roboStatePublisher** will receive the "*/move_base/global_costmap
 ![Screenshot from 2021-12-12 13-49-04](https://user-images.githubusercontent.com/69251304/145725498-7bc5d18a-ad23-4be7-b1b1-27533a07b6d5.png)
 
 ## Build
-  * To build this package, all [dependencies](#Dependency) must be installed at first.
-  * Create the workspace
+  * To build this package, all [dependencies and softwares](#Dependency) must be installed at first.
+  * Create the workspace(If you have already installed ROS and installed Tutlebot3 package, you can skip the workspace configuration steps)
      ```
     cd
     mkdir -p ~/catkin_ws/src && cd catkin_ws/src
@@ -32,11 +32,20 @@ and the node **roboStatePublisher** will receive the "*/move_base/global_costmap
     echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
     source ~/.bashrc
     ```
+  * Download this package into `~/catkin_ws/src`
+  
+  * Copy the model to gazebo model folder
+    ```
+    cd catkin_ws/src/seattle_turtlebot_nav_ros
+    sudo cp -r /gazebo/library ~/.gazebo/models/
+    ```
   * Then compile the work space
     ```
     cd catkin_ws
     catkin_make
     ```
+  * If meeting no errors, then the package has been built successfully.
+
 
 ## Run
 * launch the simulator
@@ -73,7 +82,7 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/all
   sudo apt install ros-melodic-desktop-full ros-melodic-joy ros-melodic-teleop-twist-joy ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc ros-melodic-rgbd-launch ros-melodic-depthimage-to-laserscan ros-melodic-rosserial-arduino ros-melodic-rosserial-python ros-melodic-rosserial-server ros-melodic-rosserial-client ros-melodic-rosserial-msgs ros-melodic-amcl ros-melodic-map-server ros-melodic-move-base ros-melodic-urdf ros-melodic-xacro ros-melodic-compressed-image-transport ros-melodic-rqt-image-view ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers ros-melodic-turtlebot3-gazebo
   ```
 
-  * If you have installed ROS and had a catkin workspace, then download turtlebot3
+  * If you have installed ROS and had a catkin workspace, then download turtlebot3 into the workspace
     ```
     cd /catkin_ws/src
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
@@ -87,11 +96,6 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/all
     catkin_make
     source ./devel/setup.bash
 
-    ```
-  * Copy the model to gazebo model folder
-    ```
-    cd /catkin_ws/src/seattle_turtlebot_nav_ros
-    sudo cp -r /gazebo/library ~/.gazebo/models/
     ```
   * Configure the environment variables
     ```
